@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './HeroCard.css'
 
 function HeroCard({ hero }) {
     return (
         <div className='Hero'>
+
             <article className='hero-card'>
                 <img src={hero.image} alt={hero.name} />
                 <div className='hero-card-content'>

@@ -9,13 +9,13 @@ function HeroList() {
 
     useEffect(() => {
         axios
-        .get("https://lit-badlands-40023.herokuapp.com/heros")
+        .get(`https://a.nacapi.com/Hero`)
         .then((res) => res.data)
         .then((data) => setHeroes(data))
     }, [])
 
     return (
-        <div className="HeroList">
+        <div className='HeroList'>
             <button className='filter-btn' onClick={() => setIsStrong(!isStrong)}>
                 {isStrong ? 'Affiche tous les héros' : 'Affiche les héros endurants'}
             </button>
