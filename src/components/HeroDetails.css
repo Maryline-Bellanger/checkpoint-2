@@ -1,26 +1,40 @@
 .HeroDetails {
-    margin: 20px;
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
     text-align: center;
-}
-.image-hero-detail {
-    border-radius: 50px;
-    width: 200px;
-    padding-bottom: 10px;
+    align-items: center;
+    justify-content: center;
 }
 
 .detail-card {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    margin: 50px;
+    border: solid 2px red;
+    background-color: seashell;
+    height: auto;
+    width: 30vw;
+
+}
+
+.detail-card-content, .image-hero-detail {
+    width: 100%;
     padding-bottom: 20px;
 }
 
-h2 {
+h2, .detail-card-content, .detail-card-stat {
+    color: #2B2A2C;
+}
+
+h2, h3 {
     padding-bottom: 10px;
 }
 
-.detail-card-stat {
-    padding-top: 10px;
+p {
+    padding: 5px;
 }
 
-h3 {
-    padding-bottom: 10px;
+.link-detail {
+    color: seashell;
 }

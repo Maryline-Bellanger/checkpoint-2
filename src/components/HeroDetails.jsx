@@ -16,23 +16,20 @@ function HeroDetails(props) {
 
     return (
         <div className='HeroDetails'>
-            <img className='image-hero-detail' src={detail.image} alt={detail.name} />
             <div className='detail-card'>
-                <h2>{detail.name}</h2>
+            <img className='image-hero-detail' src={detail.image} alt={detail.name} />
                 <div className='detail-card-content'>
-                    <p>Genre : {detail.gender}</p>
-                    <p>Race : {detail.race}</p>
-                    <p>Taille : {detail.height}</p>
-                    <p>Poid : {detail.weight}</p>
+                    <h2>{detail.name}</h2>
+                    <p>Genre : {detail.gender} - Race : {detail.race}</p>
+                    <p>Taille : {detail.height} - Poid : {detail.weight}</p>
                 </div>
                 <div className='detail-card-stat'>
                     <h3>Stats</h3>
-                    <p>Vitesse : {detail.speed}</p>
-                    <p>Force : {detail.force}</p>
+                    <p>Vitesse : {detail.speed} - Force : {detail.force}</p>
                     <p>Endurance : {detail.stamina}</p>
                 </div>
             </div>
-            <Link to={{pathname:'/'}}>Retour à la page principale</Link>
+            <Link className='link-detail' to={{pathname:'/'}}>Retour à la page principale</Link>
         </div>
     )
 }
