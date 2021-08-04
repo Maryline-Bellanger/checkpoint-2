@@ -12,3 +12,10 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.filter-btn {
+    text-align: center;
+    width: 10vw;
+    align-self: center;
+    margin-bottom: 30px;
+}

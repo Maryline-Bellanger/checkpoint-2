@@ -5,6 +5,7 @@ import './HeroList.css'
 
 function HeroList() {
     const [heroes, setHeroes] = useState([]);
+    const [isStrong, setIsStrong] = useState(false);
 
     useEffect(() => {
         axios
@@ -15,9 +16,21 @@ function HeroList() {
 
     return (
         <div className="HeroList">
-
+            <button className='filter-btn' onClick={() => setIsStrong(!isStrong)}>
+                {isStrong ? 'Affiche tous les héros' : 'Affiche les héros endurants'}
+            </button>
             <div className="hero-container">
-                {heroes
+                {!isStrong
+                ?
+                heroes
+                .map((hero) => (
+                    <div key={hero.id}>
+                        <HeroCard hero={hero} />
+                    </div>
+                ))
+                :
+                heroes
+                .filter((hero) => hero.stamina > 80)
                 .map((hero) => (
                     <div key={hero.id}>
                         <HeroCard hero={hero} />
